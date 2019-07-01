@@ -16,6 +16,9 @@ Plugin 'vim-airline/vim-airline'
 " https://github.com/scrooloose/nerdtree
 Plugin 'scrooloose/nerdtree'
 
+" enhance nerdtree's tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " https://github.com/airblade/scrooloose/syntastic
 Plugin 'scrooloose/syntastic'
 
@@ -37,6 +40,9 @@ Plugin 'kchmck/vim-coffee-script'
 " https://github.com/lokikl/vim-ctrlp-ag
 Plugin 'lokikl/vim-ctrlp-ag'
 
+" https://github.com/majutsushi/tagbar
+Plugin 'majutsushi/tagbar'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,8 +58,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" NERDTree ON 단축키를 "\nt"로 설정
-map <Leader>nt <ESC>:NERDTree<CR>
+map <c-n> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 nnoremap <c-k> :CtrlPag<cr>
 vnoremap <c-k> :CtrlPagVisual<cr>
@@ -83,6 +89,10 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+let g:airline#extensions#tabline#enabled = 1
+nnoremap <s-tab> :bp<CR>
+nnoremap <tab> :bn<CR>
 
 set hlsearch " 검색어 하이라이팅
 set nu " 줄번호
