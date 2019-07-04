@@ -93,6 +93,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <s-tab> :bp<CR>
 nnoremap <tab> :bn<CR>
+nnoremap <c-x> :bp<cr>:bd #<cr>
 
 set hlsearch " 검색어 하이라이팅
 set nu " 줄번호
