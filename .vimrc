@@ -96,6 +96,7 @@ nnoremap <tab> :bn<CR>
 nnoremap <c-x> :bp<cr>:bd #<cr>
 
 set hlsearch " 검색어 하이라이팅
+set cursorcolumn " 세로 커서 하이라이팅
 set nu " 줄번호
 set autoindent " 자동 들여쓰기
 set scrolloff=2
